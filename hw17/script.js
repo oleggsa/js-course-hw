@@ -1,12 +1,12 @@
-let num = +prompt('num?')
+let num = +prompt('Num')
+let pow = +prompt('Pow')
 
-if(num <= 1){
-    console.log('NaN')
-} else {
-    for(let i = 2; i <= num; i++){
-        if(num%i === 0){
-            console.log('Divider is ' + i)
-            break
-        }
+let result = function powder(num, pow = 1){
+    if (isNaN(num) || num === 0 || isNaN(pow) || pow === 0){
+        return 'some error!'
     }
+    console.log(num, pow)
+    return Math.pow(num, pow)
 }
+
+alert(result(num, pow))
